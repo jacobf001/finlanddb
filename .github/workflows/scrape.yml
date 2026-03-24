@@ -1,0 +1,116 @@
+name: Scrape SPL Data
+
+on:
+  schedule:
+    # Daily at 07:00 UTC (09:00 Helsinki) — runs scripts 3-6
+    # Fills in scores, lineups, events for any newly played matches
+    - cron: '0 7 * * *'
+
+    # Weekly on Monday at 06:00 UTC — runs all 6 scripts
+    # Discovers any new competitions or matches added that week
+    - cron: '0 6 * * 1'
+
+  # Manual trigger with optional overrides
+  workflow_dispatch:
+    inputs:
+      from_year:
+        description: 'From year (default: current year)'
+        required: false
+        default: ''
+      limit:
+        description: 'Max matches per script (0 = unlimited)'
+        required: false
+        default: '200'
+      run_discovery:
+        description: 'Run scripts 1 & 2 (competition + match discovery)?'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # ── Discovery (weekly + manual only) ──────────────────────────────────
+      # Scripts 1 & 2 are slow and only needed weekly (or on demand).
+      # Daily runs skip these — they just process already-discovered matches.
+
+      - name: 1. Discover competitions
+        if: |
+          github.event.schedule == '0 6 * * 1' ||
+          (github.event_name == 'workflow_dispatch' && github.event.inputs.run_discovery == 'true')
+        run: cd scripts && npx tsx 1.discover-competitions.ts
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+
+      - name: 2. Discover matches
+        if: |
+          github.event.schedule == '0 6 * * 1' ||
+          (github.event_name == 'workflow_dispatch' && github.event.inputs.run_discovery == 'true')
+        run: |
+          FROM_ARG=""
+          if [ -n "${{ github.event.inputs.from_year }}" ]; then
+            FROM_ARG="--from ${{ github.event.inputs.from_year }}"
+          fi
+          cd scripts && npx tsx 2.discover-matches.ts $FROM_ARG
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+
+      # ── Daily scrape (runs every day) ─────────────────────────────────────
+      # Scripts 3-6 fill in detail for matches already in the DB.
+      # Limit of 200 per run keeps each job under ~30 minutes.
+
+      - name: 3. Scrape match overviews
+        run: |
+          LIMIT="${{ github.event.inputs.limit || '200' }}"
+          cd scripts && npx tsx 3.scrape-match-overview.ts --limit $LIMIT
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+
+      - name: 4. Scrape match lineups
+        run: |
+          LIMIT="${{ github.event.inputs.limit || '200' }}"
+          cd scripts && npx tsx 4.scrape-match-lineups.ts --limit $LIMIT
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+
+      - name: 5. Scrape match events
+        run: |
+          LIMIT="${{ github.event.inputs.limit || '200' }}"
+          cd scripts && npx tsx 5.scrape-events-overview.ts --limit $LIMIT
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+
+      - name: 6. Scrape player birth years (phase 1 only in CI — fast, no API calls)
+        run: cd scripts && npx tsx 6.scrape-player-birth-years.ts --phase1-only
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+
+      - name: 6b. Scrape player birth years (phase 2 — API fallback, limited)
+        run: cd scripts && npx tsx 6.scrape-player-birth-years.ts --phase2-only --limit 100
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
