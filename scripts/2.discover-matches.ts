@@ -68,6 +68,8 @@ type MatchUpsert = {
   home_halftime:      number | null;
   away_halftime:      number | null;
   status:             string;
+  group_id:           string | null;
+  group_name:         string | null;
 };
 
 // ── Helpers ────────────────────────────────────────────────────────────────
@@ -244,6 +246,8 @@ async function main() {
         home_halftime:      m.hts_A !== "" ? Number(m.hts_A) : null,
         away_halftime:      m.hts_B !== "" ? Number(m.hts_B) : null,
         status:             m.status,
+        group_id:           (m as any).group_id   || null,
+        group_name:         (m as any).group_name || null,
       }));
 
       if (debug) console.log("  Sample:", upsertRows[0]);
