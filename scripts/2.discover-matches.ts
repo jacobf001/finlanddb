@@ -223,16 +223,18 @@ async function main() {
       totalFound += rawMatches.length;
       console.log(`  Found ${rawMatches.length} matches`);
 
-      // Filter to played matches only — no future fixtures in the DB
-      const playedMatches = rawMatches.filter(
+      const completedMatches = rawMatches.filter(
         (m) => m.status === "Played" && m.fs_A !== "" && m.fs_B !== ""
       );
-      totalPlayed += playedMatches.length;
-      console.log(`  Played: ${playedMatches.length}`);
+      totalPlayed += completedMatches.length;
+      console.log(`  Played: ${completedMatches.length}`);
 
-      if (playedMatches.length === 0) { ok++; continue; }
+      if (rawMatches.length === 0) {
+        ok++;
+        continue;
+      }
 
-      const upsertRows: MatchUpsert[] = playedMatches.map((m) => ({
+      const upsertRows: MatchUpsert[] = rawMatches.map((m) => ({
         spl_match_id:       m.match_id,
         spl_competition_id: comp.spl_competition_id,
         spl_category_id:    comp.spl_category_id,
@@ -245,8 +247,8 @@ async function main() {
         away_score:         m.fs_B !== "" ? Number(m.fs_B) : null,
         home_halftime:      m.hts_A !== "" ? Number(m.hts_A) : null,
         away_halftime:      m.hts_B !== "" ? Number(m.hts_B) : null,
-        status:             m.status,
-        group_id:           (m as any).group_id   || null,
+        status:             m.status || "Scheduled",
+        group_id:           (m as any).group_id || null,
         group_name:         (m as any).group_name || null,
       }));
 

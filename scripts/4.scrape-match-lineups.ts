@@ -155,11 +155,11 @@ async function main() {
   while (true) {
     const { data, error } = await supabase
       .from("matches")
-      .select("spl_match_id, season_year, home_team_spl_id, away_team_spl_id, scraped_lineups_at")
+      .select("spl_match_id, season_year, home_team_spl_id, away_team_spl_id, scraped_lineups_at, status, kickoff_at")
       .gte("season_year", fromYear)
       .lte("season_year", toYear)
       .is("scraped_lineups_at", null)
-      .not("home_score", "is", null)   // only process played matches with scores
+      .eq("status", "Played")
       .order("kickoff_at", { ascending: false, nullsFirst: false })
       .range(from, from + pageSize - 1);
 
@@ -202,12 +202,6 @@ async function main() {
 
       if (rawLineups.length === 0) {
         console.log(`  ⚠ lineups_filled=${match.lineups_filled} — no lineup data in response`);
-        // Still mark as scraped so we don't retry endlessly
-        if (!dry) {
-          await supabase.from("matches")
-            .update({ scraped_lineups_at: new Date().toISOString() })
-            .eq("spl_match_id", mid);
-        }
         ok++;
         await sleep(sleepMs);
         continue;

@@ -259,10 +259,10 @@ async function fetchMatchesInRange(): Promise<any[]> {
   while (true) {
     let q = supabase
       .from("matches")
-      .select("spl_match_id, season_year, home_team_spl_id, away_team_spl_id")
+      .select("spl_match_id, season_year, home_team_spl_id, away_team_spl_id, status, kickoff_at")
       .gte("season_year", fromYear)
       .lte("season_year", toYear)
-      .not("home_score", "is", null)
+      .eq("status", "Played")
       .order("kickoff_at", { ascending: false, nullsFirst: false })
       .range(from, from + pageSize - 1);
 
@@ -326,9 +326,12 @@ async function main() {
             .delete()
             .eq("spl_match_id", mid);
           if (delErr) throw new Error(`match_events delete failed: ${delErr.message}`);
-          await supabase.from("matches")
+
+          const { error: resetErr } = await supabase
+            .from("matches")
             .update({ scraped_events_at: null })
             .eq("spl_match_id", mid);
+          if (resetErr) throw new Error(`matches reset scraped_events_at failed: ${resetErr.message}`);
         }
 
         if (events.length) {
@@ -338,10 +341,11 @@ async function main() {
           if (eErr) throw new Error(`match_events upsert failed: ${eErr.message}`);
         }
 
-        await supabase
+        const { error: markErr } = await supabase
           .from("matches")
           .update({ scraped_events_at: new Date().toISOString() })
           .eq("spl_match_id", mid);
+        if (markErr) throw new Error(`matches update failed: ${markErr.message}`);
 
         console.log(`  ✓ saved events=${events.length}`);
       }
