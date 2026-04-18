@@ -108,7 +108,9 @@ async function main() {
       .select("spl_match_id, season_year, kickoff_at, home_team_spl_id, away_team_spl_id, home_score, away_score")
       .gte("season_year", fromYear)
       .lte("season_year", toYear)
-      .or("home_team_spl_id.is.null,home_score.is.null")
+      .is("scraped_overview_at", null)
+      .not("home_score", "is", null)
+      .lte("kickoff_at", new Date().toISOString())
       .order("kickoff_at", { ascending: false, nullsFirst: false })
       .range(from, from + pageSize - 1);
 

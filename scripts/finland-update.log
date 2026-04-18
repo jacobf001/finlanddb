@@ -1,0 +1,728 @@
+=== Finland Update 15/04/2026 10:35:29.36 === 
+
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\jacob\OneDrive\Desktop\finlanddb\3.scrape-match-overview.ts' imported from C:\Users\jacob\OneDrive\Desktop\finlanddb\
+    at finalizeResolution (node:internal/modules/esm/resolve:274:11)
+    at moduleResolve (node:internal/modules/esm/resolve:859:10)
+    at defaultResolve (node:internal/modules/esm/resolve:983:11)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at resolveBase (file:///C:/Users/jacob/OneDrive/Desktop/finlanddb/node_modules/tsx/dist/esm/index.mjs?1776245729866:2:3744)
+    at resolveDirectory (file:///C:/Users/jacob/OneDrive/Desktop/finlanddb/node_modules/tsx/dist/esm/index.mjs?1776245729866:2:4243)
+    at resolveTsPaths (file:///C:/Users/jacob/OneDrive/Desktop/finlanddb/node_modules/tsx/dist/esm/index.mjs?1776245729866:2:4984)
+    at resolve (file:///C:/Users/jacob/OneDrive/Desktop/finlanddb/node_modules/tsx/dist/esm/index.mjs?1776245729866:2:5361)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at Hooks.resolve (node:internal/modules/esm/hooks:240:30) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///C:/Users/jacob/OneDrive/Desktop/finlanddb/3.scrape-match-overview.ts'
+}
+
+Node.js v22.18.0
+=== Finland Update 15/04/2026 10:35:58.44 === 
+[dotenv@17.3.1] injecting env (2) from ..\.env -- tip: 🛡️ auth for agents: https://vestauth.com
+=== 3.scrape-match-overview (SPL / Torneopal) ===
+Seasons: 2026 → 2026  |  dry=false  |  limit=none  |  sleep=300ms
+
+Matches needing overview scrape: 0 | processing: 0
+
+Done. OK=0 FAIL=0
+=== Finland Update 15/04/2026 10:43:51.50 === 
+[dotenv@17.3.1] injecting env (2) from ..\.env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+=== 3.scrape-match-overview (SPL / Torneopal) ===
+Seasons: 2026 → 2026  |  dry=false  |  limit=none  |  sleep=300ms
+
+Matches needing overview scrape: 202 | processing: 202
+
+[1/202] match 4065199
+  ✓ updated (Valtti/2 0-5 Ponnistus)
+
+[2/202] match 4024474
+  ✓ updated (TuPS/Skavaböle 1-4 FC Haxi)
+
+[3/202] match 4058523
+  ✓ updated (HPS/3 3-2 HJK/United)
+
+[4/202] match 4024057
+  ✓ updated (EsPa/Keltavihree 3-0 F.C. Heimo)
+
+[5/202] match 4043661
+  ✓ updated (NoPS 2 4-3 ACE/2)
+
+[6/202] match 4058481
+  ✓ updated (Pöxyt/PitsiPöxyt 2-9 PPJ/3)
+
+[7/202] match 4058525
+  ✓ updated (KäPa 1-3 StaPa De Royale)
+
+[8/202] match 4081566
+  ✓ updated (TuPy 1-0 TuTo 2)
+
+[9/202] match 4168341
+  ✓ updated (FC Kiffen/3 0-5 IFK Mariehamn)
+
+[10/202] match 4052455
+  ✓ updated (FC Haka j./B2 1-5 P-Iirot)
+
+[11/202] match 4168345
+  ✓ updated (Fish United 0-4 SalPa)
+
+[12/202] match 4104475
+  ✓ updated (ToBK 0-3 TuPS)
+
+[13/202] match 4168353
+  ✓ updated (FC Kangasala 1-1 EIF/Akademi)
+
+[14/202] match 4090029
+  ✓ updated (I-HK/Valkoinen 5-0 PPJ/4)
+
+[15/202] match 4089263
+  ✓ updated (FC Lahti/2 2-8 HyPS/RiPS YJ)
+
+[16/202] match 4058526
+  ✓ updated (FC Dons 1-0 PPJ/2)
+
+[17/202] match 4168346
+  ✓ updated (TPV/2 0-1 P-Iirot)
+
+[18/202] match 4073559
+  ✓ updated (KaaPo 2-1 FC Inter 2)
+
+[19/202] match 4071394
+  ✓ updated (YIlves YJ 3-0 KK-V YJ)
+
+[20/202] match 4168349
+  ✓ updated (SalPa 2 0-11 VPS)
+
+[21/202] match 4168368
+  ✓ updated (FC Kiisto 1-2 RoPS)
+
+[22/202] match 4168370
+  ✓ updated (VPV 0-3 SJK Akatemia)
+
+[23/202] match 4168324
+  ✓ updated (FC POHU/CJ United 0-2 IF Gnistan)
+
+[24/202] match 4168325
+  ✓ updated (JäPS/47 0-7 VJS)
+
+[25/202] match 4168361
+  ✓ updated (Reipas 1-1 KuPS Akatemia I)
+
+[26/202] match 4168364
+  ✓ updated (HaPK Edustus 1-6 SJK)
+
+[27/202] match 4168340
+  ✓ updated (TuPS 0-2 JäPS)
+
+[28/202] match 4058524
+  ✓ updated (Ponnistus 0-7 TiPS/U23)
+
+[29/202] match 4168363
+  ✓ updated (Jippo 1-2 MP)
+
+[30/202] match 4090026
+  ✓ updated (KäPa/2 4-1 HooGee)
+
+[31/202] match 4073606
+  ✓ updated (Nasta 3-2 FC Ulvila)
+
+[32/202] match 4024348
+  ✓ updated (Valtti/2 3-2 FC Hieho)
+
+[33/202] match 4168337
+  ✓ updated (Gilla FC 2-5 PPJ)
+
+[34/202] match 4078380
+  ✓ updated (LPS/Valkoinen 4-3 PPJ/5)
+
+[35/202] match 4104477
+  ✓ updated (FC Lahti/2 2-1 NouLa)
+
+[36/202] match 4078381
+  ✓ updated (Icehearts 1-4 KaPy/2)
+
+[37/202] match 4072142
+  ✓ updated (Toukolan Teräs 6-10 VJS/4)
+
+[38/202] match 4168362
+  ✓ updated (FC Vaajakoski 0-1 JJK Jyväskylä)
+
+[39/202] match 4168365
+  ✓ updated (KTP 1-3 FC Lahti)
+
+[40/202] match 4052836
+  ✓ updated (FC RP 1-1 TPS 2)
+
+[41/202] match 4089405
+  ✓ updated (HPS/3 2-3 FC Honka/3)
+
+[42/202] match 4090025
+  ✓ updated (HyPS/RiPS YJ3 3-0 null)
+
+[43/202] match 4168327
+  ✓ updated (IF Gnistan/M35 2-2 TiPS/U21)
+
+[44/202] match 4086533
+  ✓ updated (Ponnistus 3-4 ToTe/135)
+
+[45/202] match 4078374
+  ✓ updated (EsPa/Vihreä 3-7 MPS/3)
+
+[46/202] match 4072099
+  ✓ updated (FC WILD 5-2 FC Viikingit)
+
+[47/202] match 4034259
+  ✓ updated (HJK/2 4-2 FC POHU)
+
+[48/202] match 4065147
+  ✓ updated (HooGee 7-2 TiPS/2)
+
+[49/202] match 4032049
+  ✓ updated (FC Honka 4-1 F.C. Heimo)
+
+[50/202] match 4034450
+  ✓ updated (PPJ 5-3 Valtti/2)
+
+[51/202] match 4168322
+  ✓ updated (StaPa De Royale 2-1 Loiske)
+
+[52/202] match 4089265
+  ✓ updated (NuPS 8-0 FC Tuusula)
+
+[53/202] match 4168344
+  ✓ updated (Karhu-Futis 1-6 FC LeKi)
+
+[54/202] match 4065151
+  ✓ updated (KaPy 1-1 HIFK)
+
+[55/202] match 4031484
+  ✓ updated (TPS 6-3 FC Inter)
+
+[56/202] match 4145420
+  ✓ updated (Ilves/3 1-3 TPV/2)
+
+[57/202] match 4065156
+  ✓ updated (RCDE/KäPa YJ 1-5 PK-35)
+
+[58/202] match 4065153
+  ✓ updated (FC KTP Juniorit/2 0-4 LPS)
+
+[59/202] match 4089395
+  ✓ updated (EPS/3 9-0 IF Gnistan/3)
+
+[60/202] match 4034161
+  ✓ updated (GrIFK 5-1 Valtti)
+
+[61/202] match 4072093
+  ✓ updated (FC Honka/Musta 10 2-4 JäPS/4)
+
+[62/202] match 4089269
+  ✓ updated (KaPy 0-3 HJK/2)
+
+[63/202] match 4034257
+  ✓ updated (TiPS 3-3 Nopsa)
+
+[64/202] match 4032050
+  ✓ updated (TPS 0-3 HJK)
+
+[65/202] match 4030326
+  ✓ updated (TPV 2-2 FF Jaro)
+
+[66/202] match 4145415
+  ✓ updated (FC Lahti/T18 Valkoinen 0-4 TPS 2)
+
+[67/202] match 4034448
+  ✓ updated (VJS/2 4-0 PKKU/2)
+
+[68/202] match 4057951
+  ✓ updated (HJS 4-3 PKKU)
+
+[69/202] match 4034069
+  ✓ updated (FC Lahti 4-2 KuPS YJ)
+
+[70/202] match 4066762
+  ✓ updated (HPS/FC POHU YJ 10-0 NuPS)
+
+[71/202] match 4030414
+  ✓ updated (Jippo-j 2-1 KäPa/2)
+
+[72/202] match 4034376
+  ✓ updated (FC Nokia 1-2 TPS/2)
+
+[73/202] match 4065144
+  ✓ updated (LePa 1-3 PKKU/3)
+
+[74/202] match 4066761
+  ✓ updated (RiPS/HyPS YJ 2-1 LeKi-futis YJ)
+
+[75/202] match 4168375
+  ✓ updated (Heinäpään Hanhet 0-10 Hercules)
+
+[76/202] match 4032093
+  ✓ updated (KuPS YJ 3-4 ONS)
+
+[77/202] match 4065145
+  ✓ updated (F.C. Heimo/2 5-1 FC Honka/3)
+
+[78/202] match 4030417
+  ✓ updated (VJS/2 8-1 TPS 2)
+
+[79/202] match 4030328
+  ✓ updated (FC Jazz 2-1 FC Haka-j)
+
+[80/202] match 4052450
+  ✓ updated (P-Iirot 7-1 Apassit YJ)
+
+[81/202] match 4104955
+  ✓ updated (SJK-j/2 3-1 TUS)
+
+[82/202] match 4034375
+  ✓ updated (TuWe 1-0 FC Haka-j)
+
+[83/202] match 4030287
+  ✓ updated (JäPS 6-1 Atlantis FC)
+
+[84/202] match 4072102
+  ✓ updated (LoPa/B2 2-1 FC HIK/VNFA YJ)
+
+[85/202] match 4072101
+  ✓ updated (SISU/Valkoinen 5-0 HPS/FC POHU YJ)
+
+[86/202] match 4065143
+  ✓ updated (PPJ/2 4-2 KP-75/TuPS YJ)
+
+[87/202] match 4032051
+  ✓ updated (Valtti 0-2 IF Gnistan)
+
+[88/202] match 4030329
+  ✓ updated (Ilves/2 4-0 KePS YJ)
+
+[89/202] match 4071370
+  ✓ updated (MaPS 0-9 MuSa)
+
+[90/202] match 4168342
+  ✓ updated (ACE 0-4 PIF)
+
+[91/202] match 4089392
+  ✓ updated (LePa 0-6 FC Kontu)
+
+[92/202] match 4052445
+  ✓ updated (SalPa 8-1 Pori Akatemia YJ)
+
+[93/202] match 4030323
+  ✓ updated (RoPS 5-1 VPS J/2)
+
+[94/202] match 4071376
+  ✓ updated (P-Iirot 2 2-5 YIlves YJ)
+
+[95/202] match 4065150
+  ✓ updated (EPS/2 0-3 MPS/2)
+
+[96/202] match 4168331
+  ✓ updated (HPS 3-0 NJS)
+
+[97/202] match 4035862
+  ✓ updated (F.C. Heimo 2-0 TuWe)
+
+[98/202] match 4065141
+  ✓ updated (FC KTP Juniorit 7-1 KJP)
+
+[99/202] match 4036863
+  ✓ updated (FC Inter 2-1 Ilves)
+
+[100/202] match 4035864
+  ✓ updated (GrIFK 0-3 FC Kiffen)
+
+[101/202] match 4065152
+  ✓ updated (FC Kirkkonummi 2-3 LoPa)
+
+[102/202] match 4072092
+  ✓ updated (FC Lahti/Musta 2-1 Union Plaani)
+
+[103/202] match 4038051
+  ✓ updated (EIF 1-2 Jippo)
+
+[104/202] match 4034162
+  ✓ updated (HJK 2-1 VJS)
+
+[105/202] match 4089268
+  ✓ updated (PEP 2-2 HPS/2)
+
+[106/202] match 4052448
+  ✓ updated (Tampere United 0-7 VG-62)
+
+[107/202] match 4066775
+  ✓ updated (HJK/3 1-2 HooGee)
+
+[108/202] match 4057954
+  ✓ updated (ONS 0-6 EBK)
+
+[109/202] match 4035861
+  ✓ updated (PaiHa 1-4 PPJ)
+
+[110/202] match 4038052
+  ✓ updated (PK-35 0-0 FC Haka)
+
+[111/202] match 4030415
+  ✓ updated (ÅIFK 4-3 EPS)
+
+[112/202] match 4034474
+  ✓ updated (ONS/2 1-4 KPV YJ)
+
+[113/202] match 4145421
+  ✓ updated (FC Kuffen 1-4 FC Raahe)
+
+[114/202] match 4052446
+  ✓ updated (ÅIFK 2 1-1 HJS)
+
+[115/202] match 4034068
+  ✓ updated (MP 2-1 PKKU)
+
+[116/202] match 4035860
+  ✓ updated (HIFK 1-3 IF Gnistan/2)
+
+[117/202] match 4043001
+  ✓ updated (RoPS 3-2 FC Inter 2)
+
+[118/202] match 4043000
+  ✓ updated (TPV 0-0 KPV)
+
+[119/202] match 4065154
+  ✓ updated (F.C. Heimo/3 2-8 LPS/Vihreä)
+
+[120/202] match 4036862
+  ✓ updated (HJK 0-1 AC Oulu)
+
+[121/202] match 4168339
+  ✓ updated (MPS 0-7 EBK)
+
+[122/202] match 4168360
+  ✓ updated (KoPa 0-5 MyPa)
+
+[123/202] match 4030288
+  ✓ updated (HJK 6-1 FC Kontu)
+
+[124/202] match 4031482
+  ✓ updated (EsPa 2-1 TPV)
+
+[125/202] match 4030325
+  ✓ updated (HoDy YJ 3-3 KuPS/2)
+
+[126/202] match 4168321
+  ✓ updated (SUMU/sob 2-2 EPS)
+
+[127/202] match 4052815
+  ✓ updated (MaPS 2 1-1 JIK)
+
+[128/202] match 4042999
+  ✓ updated (SalPa 2-0 Tampere United)
+
+[129/202] match 4030327
+  ✓ updated (KPV 2-0 Ilves/3)
+
+[130/202] match 4057952
+  ✓ updated (FC KTP 1-4 JyPK)
+
+[131/202] match 4034378
+  ✓ updated (P-Iirot 3-1 Ilves/2)
+
+[132/202] match 4052447
+  ✓ updated (IFK Mariehamn 5-0 NoPS)
+
+[133/202] match 4065157
+  ✓ updated (VJS/3 6-1 PPS)
+
+[134/202] match 4030419
+  ✓ updated (TiPS 1-3 PPJ)
+
+[135/202] match 4072095
+  ✓ updated (HJK/3 2-6 NJS)
+
+[136/202] match 4168374
+  ✓ updated (LappBK 1-8 Virkiä)
+
+[137/202] match 4034071
+  ✓ updated (SJK-j 0-7 Ilves)
+
+[138/202] match 4034072
+  ✓ updated (OLS 1-0 VPS J)
+
+[139/202] match 4042998
+  ✓ updated (FC Jazz 1-5 PKKU)
+
+[140/202] match 4168371
+  ✓ updated (HauPa 2-3 GBK)
+
+[141/202] match 4034475
+  ✓ updated (FC Siili YJ 3-0 OHF)
+
+[142/202] match 4031485
+  ✓ updated (NoPS 3-2 FC Honka)
+
+[143/202] match 4034447
+  ✓ updated (Juniori STPS YJ 2-2 FC Lahti)
+
+[144/202] match 4034382
+  ✓ updated (SeMi 0-2 KaaPo)
+
+[145/202] match 4168347
+  ✓ updated (VG-62 1-3 Närpes Kraft)
+
+[146/202] match 4030416
+  ✓ updated (MPS 2-1 FC Honka/2)
+
+[147/202] match 4065149
+  ✓ updated (EBK 1-3 HJK/2)
+
+[148/202] match 4030324
+  ✓ updated (KuPS 3-2 VIFK)
+
+[149/202] match 4072100
+  ✓ updated (NuPS 4-2 I-HK)
+
+[150/202] match 4031483
+  ✓ updated (LePa 1-1 HJS)
+
+[151/202] match 4034070
+  ✓ updated (JJK Jyväskylä YJ 2-0 Hercules-j)
+
+[152/202] match 4066760
+  ✓ updated (Ilves 1-4 PPJ/2)
+
+[153/202] match 4036861
+  ✓ updated (KuPS 1-0 IF Gnistan)
+
+[154/202] match 4042997
+  ✓ updated (OLS 1-0 VJS)
+
+[155/202] match 4145419
+  ✓ updated (MaTo 4-1 Tampere United/2)
+
+[156/202] match 4168350
+  ✓ updated (VaKP 0-6 ÅIFK)
+
+[157/202] match 4168355
+  ✓ updated (NiemU 0-1 PEPO)
+
+[158/202] match 4034260
+  ✓ updated (Toukolan Teräs 3-0 FC Kapina)
+
+[159/202] match 4034472
+  ✓ updated (WFA YJ 5-1 Esse IK YJ)
+
+[160/202] match 4034451
+  ✓ updated (F.C. Heimo/2 1-0 EBK)
+
+[161/202] match 4071359
+  ✓ updated (LeKi-futis YJ 4-0 LiePa/PiPS YJ)
+
+[162/202] match 4089267
+  ✓ updated (FC Honka/2 1-0 IF Gnistan/2)
+
+[163/202] match 4034380
+  ✓ updated (EPS/2 0-5 PaRi)
+
+[164/202] match 4034160
+  ✓ updated (FC Honka 1-1 KäPa)
+
+[165/202] match 4034473
+  ✓ updated (GBK 2-10 FC Sport Vaasa)
+
+[166/202] match 4089386
+  ✓ updated (FC Loviisa 4-0 FC Lahti/Valkoinen)
+
+[167/202] match 4091168
+  ✓ updated (HPS 11-0 Sibbo-Vargarna)
+
+[168/202] match 4073605
+  ✓ updated (P-Iirot/2 5-0 Nasta)
+
+[169/202] match 4145422
+  ✓ updated (FC Sport Vaasa 2-2 HauPa/2)
+
+[170/202] match 4034159
+  ✓ updated (FC Inter 2-0 F.C. Heimo)
+
+[171/202] match 4032091
+  ✓ updated (VJS 1-1 HJS)
+
+[172/202] match 4065140
+  ✓ updated (FC Lahti/2 2-2 RiPS/HyPS YJ)
+
+[173/202] match 4168352
+  ✓ updated (Ylöjärvi United FC 0-7 HJS)
+
+[174/202] match 4034158
+  ✓ updated (IF Gnistan 4-0 TPS)
+
+[175/202] match 4030290
+  ✓ updated (MP 1-3 Valtti)
+
+[176/202] match 4106483
+  ✓ updated (PaRi T18 0-1 Yllätys)
+
+[177/202] match 4030420
+  ✓ updated (FCFJ 3-1 LAUTP)
+
+[178/202] match 4030289
+  ✓ updated (MPS 0-3 PPJ)
+
+[179/202] match 4032092
+^C^C=== Finland Update 15/04/2026 10:47:36.40 === 
+[dotenv@17.3.1] injecting env (2) from ..\.env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+=== 3.scrape-match-overview (SPL / Torneopal) ===
+Seasons: 2026 → 2026  |  dry=false  |  limit=none  |  sleep=300ms
+
+Matches needing overview scrape: 24 | processing: 24
+
+[1/24] match 4032092
+  ✓ updated (Ilves 5-0 PKKU)
+
+[2/24] match 4168336
+  ✓ updated (Mando United 0-16 HIFK)
+
+[3/24] match 4035863
+  ✓ updated (FC Honka/2 1-5 HPS/2)
+
+[4/24] match 4034256
+  ✓ updated (FC Lahti/Musta 1-8 HIFK)
+
+[5/24] match 4078373
+  ⚠ status=Fixture — skipping
+
+[6/24] match 4036860
+  ✓ updated (VPS 0-0 FF Jaro)
+
+[7/24] match 4089340
+  ✓ updated (FC Tuusula 2-5 HJK/3)
+
+[8/24] match 4065148
+  ✓ updated (GrIFK/2 4-1 Valtti/2)
+
+[9/24] match 4168334
+  ✓ updated (VJS/Akatemia 4-1 LoPa)
+
+[10/24] match 4072098
+  ✓ updated (FC Kirkkonummi/Black 0-4 VJS/4)
+
+[11/24] match 4168356
+  ✓ updated (Jippo-j/PunaMusta 0-2 JPS)
+
+[12/24] match 4038050
+  ✓ updated (KäPa 2-2 SJK Akatemia)
+
+[13/24] match 4036859
+  ✓ updated (SJK 3-0 IFK Mariehamn)
+
+[14/24] match 4168333
+  ✓ updated (FC Futura 4-1 GrIFK)
+
+[15/24] match 4071364
+  ✓ updated (FC Haka j./T182 2-1 PIF YJ)
+
+[16/24] match 4071349
+  ✓ updated (KK-V YJ 1-4 TPV)
+
+[17/24] match 4073604
+  ✓ updated (FC Ulvila 9-0 Karhu-Futis)
+
+[18/24] match 4030418
+  ✓ updated (EIF/VNFA YJ 2-4 PKKU/2)
+
+[19/24] match 4038048
+  ✓ updated (JäPS 1-0 HJK Klubi 04)
+
+[20/24] match 4038049
+  ✓ updated (KTP 1-0 MP)
+
+[21/24] match 4042996
+  ✓ updated (KuPS Akatemia I 1-2 JJK Jyväskylä)
+
+[22/24] match 4036858
+  ✓ updated (TPS 2-1 FC Lahti)
+
+[23/24] match 4071354
+  ✓ updated (FC RP/TuKV YJ 2-0 RaiFu)
+
+[24/24] match 4145417
+  ✓ updated (PPJ/2 2-1 KoiPS)
+
+Done. OK=24 FAIL=0
+=== Finland Update 15/04/2026 10:49:05.44 === 
+[dotenv@17.3.1] injecting env (2) from ..\.env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+=== 3.scrape-match-overview (SPL / Torneopal) ===
+Seasons: 2026 → 2026  |  dry=false  |  limit=none  |  sleep=300ms
+
+Matches needing overview scrape: 1 | processing: 1
+
+[1/1] match 4078373
+^C^C=== Finland Update 15/04/2026 10:49:15.46 === 
+[dotenv@17.3.1] injecting env (2) from ..\.env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+=== 3.scrape-match-overview (SPL / Torneopal) ===
+Seasons: 2026 → 2026  |  dry=false  |  limit=none  |  sleep=300ms
+
+Matches needing overview scrape: 1 | processing: 1
+
+[1/1] match 4078373
+  ⚠ status=Fixture — skipping
+
+Done. OK=1 FAIL=0
+=== Finland Update 15/04/2026 10:51:32.12 === 
+[dotenv@17.3.1] injecting env (2) from ..\.env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+=== 3.scrape-match-overview (SPL / Torneopal) ===
+Seasons: 2026 → 2026  |  dry=false  |  limit=none  |  sleep=300ms
+
+Matches needing overview scrape: 1 | processing: 1
+
+[1/1] match 4078373
+  ⚠ status=Fixture — skipping
+
+Done. OK=1 FAIL=0
+=== Finland Update 15/04/2026 10:59:53.45 === 
+[dotenv@17.3.1] injecting env (2) from ..\.env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+=== 3.scrape-match-overview (SPL / Torneopal) ===
+Seasons: 2026 → 2026  |  dry=false  |  limit=none  |  sleep=300ms
+
+Matches needing overview scrape: 1 | processing: 1
+
+[1/1] match 4078373
+  ⚠ status=Fixture — skipping
+
+Done. OK=1 FAIL=0
+=== Finland Update 15/04/2026 11:00:36.38 === 
+[dotenv@17.3.1] injecting env (2) from ..\.env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+=== 3.scrape-match-overview (SPL / Torneopal) ===
+Seasons: 2026 → 2026  |  dry=false  |  limit=none  |  sleep=300ms
+
+Matches needing overview scrape: 1 | processing: 1
+
+[1/1] match 4078373
+  ⚠ status=Fixture — skipping
+
+Done. OK=1 FAIL=0
+=== Finland Update 15/04/2026 11:01:15.34 === 
+[dotenv@17.3.1] injecting env (2) from ..\.env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+=== 3.scrape-match-overview (SPL / Torneopal) ===
+Seasons: 2026 → 2026  |  dry=false  |  limit=none  |  sleep=300ms
+
+Matches needing overview scrape: 1 | processing: 1
+
+[1/1] match 4078373
+  ⚠ status=Fixture — skipping
+
+Done. OK=1 FAIL=0
+=== Finland Update 15/04/2026 11:01:26.54 === 
+Need to install the following packages:
+tsx@4.21.0
+Ok to proceed? (y) ^C=== Finland Update 15/04/2026 11:02:57.35 === 
+[dotenv@17.3.1] injecting env (2) from ..\.env -- tip: ⚙️  enable debug logging with { debug: true }
+=== 3.scrape-match-overview (SPL / Torneopal) ===
+Seasons: 2026 → 2026  |  dry=false  |  limit=none  |  sleep=300ms
+
+Matches needing overview scrape: 1 | processing: 1
+
+[1/1] match 4078373
+  ⚠ status=Fixture — skipping
+
+Done. OK=1 FAIL=0

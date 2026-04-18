@@ -247,7 +247,7 @@ async function main() {
         away_score:         m.fs_B !== "" ? Number(m.fs_B) : null,
         home_halftime:      m.hts_A !== "" ? Number(m.hts_A) : null,
         away_halftime:      m.hts_B !== "" ? Number(m.hts_B) : null,
-        status:             m.status || "Scheduled",
+        status:             (m.fs_A !== "" && m.fs_A != null && m.fs_B !== "" && m.fs_B != null) ? "Played" : (m.status || "Scheduled"),
         group_id:           (m as any).group_id || null,
         group_name:         (m as any).group_name || null,
       }));
